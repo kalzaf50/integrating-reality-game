@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://kivxy0ldd8or"]
+
+[ext_resource type="PackedScene" uid="uid://msdr318pf0e4" path="res://hand/model/rigged_lowpoly_hand.glb" id="1_0wnd1"]
+[ext_resource type="Script" uid="uid://dng2xya3mae3m" path="res://hand/model/hand_model.gd" id="2_o4udy"]
+
+[node name="hand_model_scene" instance=ExtResource("1_0wnd1")]
+script = ExtResource("2_o4udy")
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform3D(-0.000676957, 0, 0.807249, 3.5286e-08, -0.807249, 2.95907e-11, 0.807249, 3.5286e-08, 0.000676957, -2.10386, 2.20756, 4.90176e-16)
+
+[node name="Skeleton3D" parent="Sketchfab_model/Root/Armature" index="0"]
+transform = Transform3D(1, -0.000419293, 0.000112373, 0.000419305, 0.866025, -0.5, 0.000112329, 0.5, 0.866026, 0, 0, 0)
+bones/3/rotation = Quaternion(0, 0, 0, 0.717)
+bones/4/rotation = Quaternion(0, 0, 0, 0.817)
+bones/6/rotation = Quaternion(0, 0, 0, 0.983)
+bones/7/rotation = Quaternion(0, 0, 0, 0.994)
+bones/8/rotation = Quaternion(0, 0, 0, 0.997)
+bones/10/rotation = Quaternion(0, 0, 0, 0.739)
+bones/11/rotation = Quaternion(0, 0, 0, 0.768)
+bones/12/rotation = Quaternion(0, 0, 0, 0.991)
+bones/14/rotation = Quaternion(0, 0, 0, 0.684)
+bones/15/rotation = Quaternion(0, 0, 0, 0.875)
+bones/16/rotation = Quaternion(0, 0, 0, 0.879)
+bones/18/rotation = Quaternion(0, 0, 0, 0.837)
+bones/19/rotation = Quaternion(0, 0, 0, 0.741)
+bones/20/rotation = Quaternion(0, 0, 0, 0.862)

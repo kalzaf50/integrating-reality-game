@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://be4ced4mmnl6f"]
+
+[ext_resource type="Script" uid="uid://bp3gwaactk1mb" path="res://projectile.gd" id="1_a85iw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_akgne"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_a85iw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akgne"]
+albedo_color = Color(0.455678, 0.028838, 0.108861, 1)
+
+[node name="Projectile" type="Node3D"]
+script = ExtResource("1_a85iw")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." groups=["projectile"]]
+collision_mask = 3
+mass = 0.3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(0.519436, 0, 0, 0, 0.519436, 0, 0, 0, 0.519436, 0, 0, 0)
+shape = SubResource("SphereShape3D_akgne")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D"]
+mesh = SubResource("SphereMesh_a85iw")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_akgne")
+
+[node name="DestroyTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]
