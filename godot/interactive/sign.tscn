@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bs5hasiknl5f2"]
+
+[ext_resource type="Script" uid="uid://dekqg8clyfk3i" path="res://interactive/sign.gd" id="1_l0fy0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_faw3h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_faw3h"]
+albedo_color = Color(0.427451, 0.329412, 0.180392, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l0fy0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l0fy0"]
+albedo_color = Color(0.427451, 0.329412, 0.180392, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_faw3h"]
+
+[node name="Sign" type="Node3D"]
+script = ExtResource("1_l0fy0")
+
+[node name="handle" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_faw3h")
+surface_material_override/0 = SubResource("StandardMaterial3D_faw3h")
+
+[node name="board" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.6, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 1, 0)
+mesh = SubResource("BoxMesh_l0fy0")
+surface_material_override/0 = SubResource("StandardMaterial3D_l0fy0")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.1, 0, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_faw3h")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
