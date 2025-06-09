@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bifbs5sm3l0if"]
+[gd_scene load_steps=26 format=3 uid="uid://bifbs5sm3l0if"]
 
 [ext_resource type="Script" uid="uid://cbnu4r4pagki0" path="res://hand/hand_tracking.gd" id="1_vbggk"]
 [ext_resource type="PackedScene" uid="uid://cdrwnqp2lnjyh" path="res://player/player.tscn" id="2_fj7yv"]
@@ -41,16 +41,6 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 19, 18.2, 0, 1, 1, 19, 13.8, 0)
 
-[sub_resource type="Animation" id="Animation_wse8f"]
-length = 0.001
-tracks/0/type = "position_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 25, 13.8, 0)
-
 [sub_resource type="Animation" id="Animation_ic0uy"]
 resource_name = "open"
 tracks/0/type = "position_3d"
@@ -63,7 +53,6 @@ tracks/0/keys = PackedFloat32Array(0, 1, 19, 13.8, 0, 1, 1, 19, 18.2, 0)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wse8f"]
 _data = {
-&"RESET": SubResource("Animation_wse8f"),
 &"closed": SubResource("Animation_ioo17"),
 &"open": SubResource("Animation_ic0uy")
 }
@@ -108,6 +97,16 @@ mesh = SubResource("BoxMesh_fj7yv")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
 shape = SubResource("BoxShape3D_tlwt5")
 
+[node name="Ground2" type="MeshInstance3D" parent="."]
+transform = Transform3D(69.2956, 0, 0, 0, 1, 0, 0, 0, 4.8, 12.6663, 53.0027, -0.00512958)
+layers = 3
+mesh = SubResource("BoxMesh_fj7yv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground2/StaticBody3D"]
+shape = SubResource("BoxShape3D_tlwt5")
+
 [node name="Ceiling1" type="MeshInstance3D" parent="."]
 transform = Transform3D(47.6407, 0, 0, 0, 1, 0, 0, 0, 4.8, 1.6663, 25.0027, -0.00512958)
 layers = 3
@@ -116,36 +115,6 @@ mesh = SubResource("BoxMesh_fj7yv")
 [node name="StaticBody3D" type="StaticBody3D" parent="Ceiling1"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling1/StaticBody3D"]
-shape = SubResource("BoxShape3D_tlwt5")
-
-[node name="Ground4" type="MeshInstance3D" parent="."]
-transform = Transform3D(35.0866, -0.258819, 0, 9.40142, 0.965926, 0, 0, 0, 4.8, 55.9663, 15.7027, -0.00512958)
-layers = 3
-mesh = SubResource("BoxMesh_fj7yv")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Ground4"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground4/StaticBody3D"]
-shape = SubResource("BoxShape3D_tlwt5")
-
-[node name="Ground6" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.63243, -0.866025, 0, 6.29155, 0.5, 0, 0, 0, 4.8, 64.1856, 24.9219, -0.00512958)
-layers = 3
-mesh = SubResource("BoxMesh_fj7yv")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Ground6"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground6/StaticBody3D"]
-shape = SubResource("BoxShape3D_tlwt5")
-
-[node name="Ground5" type="MeshInstance3D" parent="."]
-transform = Transform3D(35.0866, 0.258819, 0, -9.40142, 0.965926, 0, 0, 0, 4.8, 41.9663, 31.7027, -0.00512958)
-layers = 3
-mesh = SubResource("BoxMesh_fj7yv")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Ground5"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground5/StaticBody3D"]
 shape = SubResource("BoxShape3D_tlwt5")
 
 [node name="Ground7" type="MeshInstance3D" parent="."]
@@ -199,7 +168,7 @@ mesh = SubResource("BoxMesh_fj7yv")
 shape = SubResource("BoxShape3D_tlwt5")
 
 [node name="Gate1" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.05906e-07, 0, -0.470589, 0, 4.53786, 0, 4.71059, 0, -2.05701e-08, 25, 13.8, 0)
+transform = Transform3D(-2.05906e-07, 0, -0.470589, 0, 4.53786, 0, 4.71059, 0, -2.05701e-08, 19, 13.8, 0)
 layers = 3
 mesh = SubResource("BoxMesh_fj7yv")
 surface_material_override/0 = SubResource("StandardMaterial3D_ioo17")
@@ -226,7 +195,7 @@ mesh = SubResource("BoxMesh_fj7yv")
 shape = SubResource("BoxShape3D_tlwt5")
 
 [node name="Player" parent="." instance=ExtResource("2_fj7yv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 13.6099, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 13.6099, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("3_tlwt5")
@@ -246,7 +215,7 @@ offset_bottom = 92.0
 text = "ATTEMPTS: "
 
 [node name="ObjectSpawner" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 20, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 28, 0)
 script = ExtResource("4_aqk2v")
 destroy_time = 5.0
 
@@ -259,7 +228,7 @@ wait_time = 0.5
 autostart = true
 
 [node name="ObjectSpawner2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 44, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 44, 0)
 script = ExtResource("4_aqk2v")
 destroy_time = 20.0
 
@@ -287,7 +256,7 @@ mesh = SubResource("BoxMesh_036b0")
 skeleton = NodePath("../..")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -14, 51, 12)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 3, 63, 12)
 current = true
 script = ExtResource("6_dwbse")
 

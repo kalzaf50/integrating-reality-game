@@ -86,6 +86,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if hand_tracker.hands_data.has("right") and hand_tracker.hands_data["right"] != null:
+	pass
+	#if hand_tracker.hands_data.has("right") and hand_tracker.hands_data["right"] != null:
 		#update_bone_transforms(hand_tracker.hands_data["right"])
-		update_point_finger_rotations(hand_tracker.hands_data["right"])
+		#update_point_finger_rotations(hand_tracker.hands_data["right"])

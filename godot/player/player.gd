@@ -5,11 +5,13 @@ class_name Player
 @onready var stats = $"../CanvasLayer"
 
 var start_position = Vector3(-16, 13, 0)
+var test_position = Vector3(6, 54, 0)
+
 const GRAVITY = 60.0
 var is_alive = true
 
 func _ready() -> void:
-	pass
+	global_position = start_position
 
 func _physics_process(delta: float) -> void:
 	var input := Vector3.ZERO
