@@ -1,1 +1,2 @@
+*INTRODUCTION*
 Most platform game interactions are limited to keyboard or controller inputs. This restricts immersion and physical engagement with players. Current motion-controlled gaming solutions, such as virtual reality (VR) or Kinect, often require expensive hardware and full-body tracking capabilities. This project utilizes a camera-based hand-tracking system to create an interactive virtual hand that acts as a dynamic platform or obstacle in a 3D game. This project aims to enhance player immersion using low-cost, software-only interaction.
