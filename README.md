@@ -18,7 +18,9 @@ This project introduces a low-cost, software-only alternative: a real-time hand-
 - 🔘 Functional in-game button activated by virtual hand
 
 ## Instructions
-1. Make sure your webcam is on and your hand is visible.
-2. Move your hand in front of the camera to control the virtual hand in-game.
-3. Try pressing the in-game button with your hand to trigger interactions.
+
+1. run python/hand_detection.py
+2. Make sure your webcam is on and your hand is visible.
+3. Open Godot and open the project (godot/project.godot).
 4. Follow the in-game tutorial for guidance.
+5. Enjoy!
