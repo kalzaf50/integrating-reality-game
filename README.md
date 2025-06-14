@@ -1,6 +1,6 @@
 # Hand-Tracking 3D Interaction Game
 
-A camera-based hand-tracking system that enhances immersion in 3D games by allowing the player’s real hand to interact with the virtual world as a dynamic platform or obstacle—no special hardware required.
+A camera-based hand-tracking system that enhances immersion in 3D games by allowing the player’s real hand to interact with the virtual world as a dynamic platform or obstacle without any special hardware required.
 
 ## Introduction
 
