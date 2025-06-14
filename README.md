@@ -8,7 +8,7 @@ Most platform games rely on traditional keyboard or controller inputs, which lim
 
 This project introduces a low-cost, software-only alternative: a real-time hand-tracking system that uses a standard webcam to control a virtual hand in a 3D game environment. The virtual hand can interact with in-game objects, activate buttons, and influence gameplay using natural gestures.
 
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://www.youtube.com/watch?v=KC3G8ZfMkog&list=PLV4I3fZVuXT3LhMcERfZ4QR2alU4q1CT0&index=12)
+[![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://www.youtube.com/watch?v=KC3G8ZfMkog&list=PLV4I3fZVuXT3LhMcERfZ4QR2alU4q1CT0&index=12)
 
 ## Features
 
