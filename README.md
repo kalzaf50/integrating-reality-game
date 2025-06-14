@@ -26,9 +26,9 @@ This project introduces a low-cost, software-only alternative: a real-time hand-
 
 ## Instructions
 
-1. Install dependencies (python/requirements.txt)
-2. Run python/hand_detection.py
+1. Install dependencies `pip install -r requirements.txt`
+2. Run `python hand_detection.py`
 3. Make sure your webcam is on and your hand is visible.
-4. Open Godot and open the project (godot/project.godot).
+4. Open Godot and open the Godot project in the `godot` folder.
 5. Follow the in-game tutorial for guidance.
 6. Enjoy!
