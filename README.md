@@ -8,6 +8,10 @@ Most platform games rely on traditional keyboard or controller inputs, which lim
 
 This project introduces a low-cost, software-only alternative: a real-time hand-tracking system that uses a standard webcam to control a virtual hand in a 3D game environment. The virtual hand can interact with in-game objects, activate buttons, and influence gameplay using natural gestures.
 
+
+https://github.com/user-attachments/assets/02d7d043-c4e6-43cd-9162-9235e19f173c
+
+
 ## Features
 
 - 🖐️ Real-time hand tracking using [MediaPipe](https://github.com/google/mediapipe) and OpenCV (Python)
