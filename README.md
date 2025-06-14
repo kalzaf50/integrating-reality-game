@@ -1,4 +1,4 @@
-# Hand-Tracking 3D Interaction Game
+# Integrating Reality: Real-Time Hand Tracking for Interactive 3D Game Mechanics
 
 A camera-based hand-tracking system that enhances immersion in 3D games by allowing the player’s real hand to interact with the virtual world as a dynamic platform or obstacle without any special hardware required.
 
@@ -16,3 +16,9 @@ This project introduces a low-cost, software-only alternative: a real-time hand-
 - 🕹️ Interactive 3D hand model rendered and rigged in [Godot Engine](https://godotengine.org/)
 - ⚙️ Physics-enabled hand interactions with game elements
 - 🔘 Functional in-game button activated by virtual hand
+
+## Instructions
+1. Make sure your webcam is on and your hand is visible.
+2. Move your hand in front of the camera to control the virtual hand in-game.
+3. Try pressing the in-game button with your hand to trigger interactions.
+4. Follow the in-game tutorial for guidance.
