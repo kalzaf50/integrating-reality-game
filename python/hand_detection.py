@@ -1,5 +1,6 @@
 import json
 import socket
+import time
 
 from typing import Optional, Sequence, Literal
 
@@ -118,6 +119,9 @@ def run_hand_tracking_server(
                 results.multi_hand_landmarks,
                 results.multi_handedness,
             )
+
+            # Add a timestamp for latency calculation
+            hand_coords["timestamp"] = time.time()
 
             # Send the hand coordinates to the client
             encoded_coords = json.dumps(hand_coords)

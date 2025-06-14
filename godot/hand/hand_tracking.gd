@@ -9,6 +9,8 @@ var right_hand: Hand
 
 var hands_data: Dictionary
 
+@onready var stats = $"../CanvasLayer"
+
 func _ready() -> void:
 	server = UDPServer.new()
 	server.listen(PORT)
@@ -36,6 +38,13 @@ func _parse_hands_from_packet(data: PackedByteArray) -> Dictionary:
 func _process(_delta: float) -> void:
 	server.poll()
 	if server.is_connection_available():
+		
+		if hands_data.has("timestamp"):
+			var sent_time = hands_data["timestamp"]
+			var now = Time.get_unix_time_from_system()
+			var latency = (now - sent_time) * 1000.0
+			stats.update_ping(latency)
+			
 		var peer = server.take_connection()
 		var data = peer.get_packet()
 		hands_data = _parse_hands_from_packet(data)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bifbs5sm3l0if"]
+[gd_scene load_steps=27 format=3 uid="uid://bifbs5sm3l0if"]
 
 [ext_resource type="Script" uid="uid://cbnu4r4pagki0" path="res://hand/hand_tracking.gd" id="1_vbggk"]
 [ext_resource type="PackedScene" uid="uid://cdrwnqp2lnjyh" path="res://player/player.tscn" id="2_fj7yv"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://b18jf8kxny4o" path="res://camera_3d.gd" id="6_dwbse"]
 [ext_resource type="Script" uid="uid://b7xj1otogspc3" path="res://finish_point.gd" id="8_gbfbk"]
 [ext_resource type="PackedScene" uid="uid://byculd0i5e21v" path="res://interactive/floor_button.tscn" id="9_ioo17"]
+[ext_resource type="PackedScene" uid="uid://cxpodwkaxsv4p" path="res://interactive/laser.tscn" id="10_wse8f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3lt1c"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -88,7 +89,7 @@ shadow_enabled = true
 script = ExtResource("1_vbggk")
 
 [node name="Ground" type="MeshInstance3D" parent="."]
-transform = Transform3D(69.2956, 0, 0, 0, 1, 0, 0, 0, 4.8, 12.6663, 11.0027, -0.00512958)
+transform = Transform3D(86.8967, 0, 0, 0, 1, 0, 0, 0, 4.8, 21.7663, 11.0027, -0.00512958)
 layers = 3
 mesh = SubResource("BoxMesh_fj7yv")
 
@@ -108,7 +109,7 @@ mesh = SubResource("BoxMesh_fj7yv")
 shape = SubResource("BoxShape3D_tlwt5")
 
 [node name="Ceiling1" type="MeshInstance3D" parent="."]
-transform = Transform3D(47.6407, 0, 0, 0, 1, 0, 0, 0, 4.8, 1.6663, 25.0027, -0.00512958)
+transform = Transform3D(86.5544, 0, 0, 0, 1, 0, 0, 0, 4.8, 21.6663, 25.0027, -0.00512958)
 layers = 3
 mesh = SubResource("BoxMesh_fj7yv")
 
@@ -128,7 +129,7 @@ mesh = SubResource("BoxMesh_fj7yv")
 shape = SubResource("BoxShape3D_tlwt5")
 
 [node name="Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(78.624, 0, 0, 0, 15.7777, 0, 0, 0, 0.784315, 16.9663, 17.5425, -2.79524)
+transform = Transform3D(91.0702, 0, 0, 0, 15.7777, 0, 0, 0, 0.784315, 20.6663, 17.5425, -2.79524)
 layers = 3
 mesh = SubResource("BoxMesh_fj7yv")
 
@@ -145,6 +146,16 @@ mesh = SubResource("BoxMesh_fj7yv")
 [node name="StaticBody3D" type="StaticBody3D" parent="Wall2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2/StaticBody3D"]
+shape = SubResource("BoxShape3D_tlwt5")
+
+[node name="Wall9" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.42243e-07, 0, -0.784315, 0, 14.9209, 0, 5.54187, 0, -3.42835e-08, 65.0241, 17.9425, -0.400756)
+layers = 3
+mesh = SubResource("BoxMesh_fj7yv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall9/StaticBody3D"]
 shape = SubResource("BoxShape3D_tlwt5")
 
 [node name="Wall3" type="MeshInstance3D" parent="."]
@@ -165,6 +176,36 @@ mesh = SubResource("BoxMesh_fj7yv")
 [node name="StaticBody3D" type="StaticBody3D" parent="Wall5"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall5/StaticBody3D"]
+shape = SubResource("BoxShape3D_tlwt5")
+
+[node name="Wall8" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.42243e-07, 0, -0.784315, 0, 9.45387, 0, 5.54187, 0, -3.42835e-08, 56.0241, 20.6425, -0.400756)
+layers = 3
+mesh = SubResource("BoxMesh_fj7yv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall8/StaticBody3D"]
+shape = SubResource("BoxShape3D_tlwt5")
+
+[node name="Wall6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.42243e-07, 0, -0.784315, 0, 9.45387, 0, 5.54187, 0, -3.42835e-08, 37.0241, 16.2425, -0.400756)
+layers = 3
+mesh = SubResource("BoxMesh_fj7yv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall6/StaticBody3D"]
+shape = SubResource("BoxShape3D_tlwt5")
+
+[node name="Wall7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.42243e-07, 0, -4.70589, 0, 0.661771, 0, 5.54187, 0, -2.05701e-07, 35.0241, 20.6425, -0.400756)
+layers = 3
+mesh = SubResource("BoxMesh_fj7yv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall7/StaticBody3D"]
 shape = SubResource("BoxShape3D_tlwt5")
 
 [node name="Gate1" type="MeshInstance3D" parent="."]
@@ -195,7 +236,7 @@ mesh = SubResource("BoxMesh_fj7yv")
 shape = SubResource("BoxShape3D_tlwt5")
 
 [node name="Player" parent="." instance=ExtResource("2_fj7yv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 13.6099, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 13.6099, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("3_tlwt5")
@@ -214,8 +255,15 @@ offset_right = 184.0
 offset_bottom = 92.0
 text = "ATTEMPTS: "
 
+[node name="Ping" type="Label" parent="CanvasLayer"]
+offset_left = 39.0
+offset_top = 100.0
+offset_right = 184.0
+offset_bottom = 126.0
+text = "PING: "
+
 [node name="ObjectSpawner" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 28, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 36.5, 0)
 script = ExtResource("4_aqk2v")
 destroy_time = 5.0
 
@@ -228,7 +276,7 @@ wait_time = 0.5
 autostart = true
 
 [node name="ObjectSpawner2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 44, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31, 44, 0)
 script = ExtResource("4_aqk2v")
 destroy_time = 20.0
 
@@ -241,7 +289,7 @@ wait_time = 1.5
 autostart = true
 
 [node name="BreakableWall" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 14.203, 0.395)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 28.203, 0.395)
 collision_mask = 3
 mass = 5.0
 script = ExtResource("5_pkg7o")
@@ -256,12 +304,24 @@ mesh = SubResource("BoxMesh_036b0")
 skeleton = NodePath("../..")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 3, 63, 12)
+transform = Transform3D(1, 0, 0, 0, 1, -5.96046e-08, 0, 5.96046e-08, 1, -9, 17.8, 12)
 current = true
 script = ExtResource("6_dwbse")
 
 [node name="SpawnPoint" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 11.51, 0)
+mesh = SubResource("PlaneMesh_gbfbk")
+
+[node name="CheckPoint" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.4, 11.51, 0)
+mesh = SubResource("PlaneMesh_gbfbk")
+
+[node name="CheckPoint2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2, 11.51, 0)
+mesh = SubResource("PlaneMesh_gbfbk")
+
+[node name="CheckPoint3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.2, 11.51, 0)
 mesh = SubResource("PlaneMesh_gbfbk")
 
 [node name="FinishPoint" type="MeshInstance3D" parent="."]
@@ -300,6 +360,24 @@ font_size = 217
 outline_size = 62
 horizontal_alignment = 0
 
+[node name="Tuto3" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3, 20, -2.4)
+modulate = Color(0.129412, 0.4, 0.560784, 1)
+outline_modulate = Color(0.0281802, 0.152071, 0.225892, 1)
+text = "TIP : Hand might help"
+font_size = 217
+outline_size = 62
+horizontal_alignment = 0
+
+[node name="Tuto4" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.3, 20, -2.4)
+modulate = Color(0.129412, 0.4, 0.560784, 1)
+outline_modulate = Color(0.0281802, 0.152071, 0.225892, 1)
+text = "Those lasers look deadly!"
+font_size = 217
+outline_size = 62
+horizontal_alignment = 0
+
 [node name="Arrow1" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 13.3, -2.4)
 modulate = Color(0.129412, 0.4, 0.560784, 1)
@@ -308,8 +386,36 @@ text = "➟"
 font_size = 677
 outline_size = 62
 
+[node name="Arrow2" type="Label3D" parent="."]
+transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, 27, 15.3, -2.4)
+modulate = Color(0.129412, 0.4, 0.560784, 1)
+outline_modulate = Color(0.0281802, 0.152071, 0.225892, 1)
+text = "➟"
+font_size = 677
+outline_size = 62
+
+[node name="Arrow3" type="Label3D" parent="."]
+transform = Transform3D(1, 4.37114e-08, 0, -4.37114e-08, 1, 0, 0, 0, 1, 35.2, 22.7, -2.4)
+modulate = Color(0.129412, 0.4, 0.560784, 1)
+outline_modulate = Color(0.0281802, 0.152071, 0.225892, 1)
+text = "➟"
+font_size = 677
+outline_size = 62
+
 [node name="FloorButton" parent="." instance=ExtResource("9_ioo17")]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 1.5, 20, 0)
+
+[node name="Laser" parent="." instance=ExtResource("10_wse8f")]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 45, 24.4, 0)
+
+[node name="Laser2" parent="." instance=ExtResource("10_wse8f")]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 46, 24.4, 0)
+
+[node name="Laser3" parent="." instance=ExtResource("10_wse8f")]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 47, 24.4, 0)
+
+[node name="Laser4" parent="." instance=ExtResource("10_wse8f")]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 48, 24.4, 0)
 
 [connection signal="timeout" from="ObjectSpawner/SpawnRate" to="ObjectSpawner" method="_on_spawn_rate_timeout"]
 [connection signal="timeout" from="ObjectSpawner2/SpawnRate" to="ObjectSpawner2" method="_on_spawn_rate_timeout"]

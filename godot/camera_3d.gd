@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 		if player and not (hand_tracker.left_hand.is_active() or hand_tracker.right_hand.is_active()):
 			var target_position = global_position
 			target_position.x = player.global_position.x
-			target_position.y = player.global_position.y + 7
+			target_position.y = player.global_position.y + 6
 			
 			# Smoothly interpolate to the target position
 			global_position = global_position.lerp(target_position, 5 * delta)

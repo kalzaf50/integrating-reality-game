@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxpodwkaxsv4p"]
+
+[ext_resource type="Script" uid="uid://b82cxul7anopb" path="res://laser.gd" id="1_6x5yo"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6x5yo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6x5yo"]
+albedo_color = Color(0.505297, 0.115837, 0.131363, 1)
+
+[node name="Laser" type="Node3D"]
+script = ExtResource("1_6x5yo")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+
+[node name="Scaler" type="Node3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scaler"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 1)
+mesh = SubResource("CylinderMesh_6x5yo")
+surface_material_override/0 = SubResource("StandardMaterial3D_6x5yo")
