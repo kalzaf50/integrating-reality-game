@@ -17,11 +17,12 @@ This project introduces a low-cost, software-only alternative: a real-time hand-
 - ⚙️ Physics-enabled hand interactions with game elements
 - 🔘 Functional in-game button activated by virtual hand
 
-## Requirements
-- Python 3.8+
-- Godot 4.x
+## Setup
+- Python 3.11.5
+- OpenCV 4.9.0
+- Godot 4.4
+- MediaPipe 0.10.14
 - Webcam
-- pip (Python package manager)
 
 ## Instructions
 
