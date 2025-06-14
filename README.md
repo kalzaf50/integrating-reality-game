@@ -15,7 +15,7 @@ This project introduces a low-cost, software-only alternative: a real-time hand-
 - 🧠 JSON-based data transmission of hand landmark coordinates
 - 🕹️ Interactive 3D hand model rendered and rigged in [Godot Engine](https://godotengine.org/)
 - ⚙️ Physics-enabled hand interactions with game elements
-- 🔘 Functional in-game button activated by virtual hand
+- 🔘 Interactive virtual objects
 
 ## Setup
 - Python 3.11.5
