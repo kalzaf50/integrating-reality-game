@@ -17,6 +17,12 @@ This project introduces a low-cost, software-only alternative: a real-time hand-
 - ⚙️ Physics-enabled hand interactions with game elements
 - 🔘 Functional in-game button activated by virtual hand
 
+## Requirements
+- Python 3.8+
+- Godot 4.x
+- Webcam
+- pip (Python package manager)
+
 ## Instructions
 
 1. run python/hand_detection.py
