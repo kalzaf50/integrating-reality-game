@@ -30,9 +30,10 @@ https://github.com/user-attachments/assets/02d7d043-c4e6-43cd-9162-9235e19f173c
 
 ## Instructions
 
-1. Install dependencies `pip install -r requirements.txt`
-2. Run `python hand_detection.py`
-3. Make sure your webcam is on and your hand is visible.
-4. Open Godot and open the Godot project in the `godot` folder.
-5. Follow the in-game tutorial for guidance.
-6. Enjoy!
+1. Clone the repository.
+2. Install dependencies `pip install -r requirements.txt`.
+3. Run `python hand_detection.py`.
+4. Make sure your webcam is on and your hand is visible.
+5. Open Godot and open the Godot project in the `godot` folder.
+6. Follow the in-game tutorial for guidance.
+7. Enjoy!
