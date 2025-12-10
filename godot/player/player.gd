@@ -1,7 +1,6 @@
 extends RigidBody3D
 class_name Player
 
-@onready var tween = create_tween()
 @onready var stats = $"../CanvasLayer"
 
 var start_position = Vector3(-16, 13, 0)
@@ -46,7 +45,7 @@ func explode_and_respawn():
 	angular_velocity = Vector3.ZERO
 
 	# Create explosion animation
-	tween = create_tween()
+	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector3.ONE * 2.5, 0.3).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	tween.tween_property(self, "scale", Vector3.ZERO, 0.2).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 

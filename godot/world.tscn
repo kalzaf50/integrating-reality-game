@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://bifbs5sm3l0if"]
+[gd_scene load_steps=28 format=3 uid="uid://bifbs5sm3l0if"]
 
+[ext_resource type="Script" uid="uid://cmkot10vyf5jo" path="res://world.gd" id="1_ic0uy"]
 [ext_resource type="Script" uid="uid://cbnu4r4pagki0" path="res://hand/hand_tracking.gd" id="1_vbggk"]
 [ext_resource type="PackedScene" uid="uid://cdrwnqp2lnjyh" path="res://player/player.tscn" id="2_fj7yv"]
 [ext_resource type="Script" uid="uid://bch5yprviie5p" path="res://gate_1.gd" id="2_ioo17"]
@@ -76,6 +77,7 @@ material = SubResource("StandardMaterial3D_pkg7o")
 [sub_resource type="BoxShape3D" id="BoxShape3D_pkg7o"]
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_ic0uy")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jiyc6")
