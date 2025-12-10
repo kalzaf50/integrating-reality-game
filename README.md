@@ -22,7 +22,7 @@ https://github.com/user-attachments/assets/02d7d043-c4e6-43cd-9162-9235e19f173c
 - 🔘 Interactive virtual objects
 
 ## User Setup (Windows)
-1. Download the release ZIP from **GitHub Releases**
+1. Download the release ZIP `VirtualHandGame_Windows_v1.0.zip` from **GitHub Releases**
 2. Extract all files
 3. Run "virtual-hand-game.exe"
 
