@@ -21,19 +21,29 @@ https://github.com/user-attachments/assets/02d7d043-c4e6-43cd-9162-9235e19f173c
 - ⚙️ Physics-enabled hand interactions with game elements
 - 🔘 Interactive virtual objects
 
-## Setup
+## User Setup (Windows)
+1. Download the release ZIP from **GitHub Releases**
+2. Extract all files
+3. Run "virtual-hand-game.exe"
+
+No Python installation is required.
+
+---
+
+## Developer Setup
 - Python 3.11.5
 - OpenCV 4.9.0
-- Godot 4.4
+- Godot 4.*
 - MediaPipe 0.10.14
 - Webcam
 
 ## Instructions
 
 1. Clone the repository.
-2. Install dependencies `pip install -r requirements.txt`.
-3. Run `python hand_detection.py`.
-4. Make sure your webcam is on and your hand is visible.
-5. Open Godot and open the Godot project in the `godot` folder.
-6. Follow the in-game tutorial for guidance.
-7. Enjoy!
+2. Create a Python environment `python -m venv python`.
+3. Activate the Python environment `python\Scripts\activate`.
+4. Install dependencies `pip install mediapipe opencv-python`.
+5. Make sure your webcam is on, and your hand is visible.
+6. Run "virtual-hand-game.exe"
+7. Follow the in-game tutorial for guidance.
+8. Enjoy!
